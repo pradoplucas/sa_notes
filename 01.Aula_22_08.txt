@@ -1,0 +1,71 @@
+- Inicio da aula falando sobre  o tipo certo e errado de perguntar..
+
+- Revisão semana passada:
+
+    A arquitetura define como o software vai ser feito, ela esta dentro do software (Ela é feita de estruturas..)
+    Varias estruturas arquiteturais que formam o software, como o corpo humano (musculos, ossos)
+    Qualidade depende de atributos, como manutenabilidade e portabilidade (usaremos só esses dois na disciplina)
+    É dificil medir a manutenabilidade, normalmente usa-se eficiencia e eficacia..
+    A eficiencia é medida com tempo, e a eficacia com corretude..
+
+- Dar uma olhada em como usar o git dentro do netbeans..
+
+- Desenvolvimento: Requisitos para sistema exemplo 1
+
+    Analisar requisitos e comparar com o código dele (tá no git)..
+    Analisar coesão, não faz sentido compara idade dentro do metodo incluir..
+    Deixar atributos privados e criar gets e sets..
+    Gerar excessão (throw new Unsuported...) no setLimiteCredito..
+    Define limite de crédito quando chamar setIdade, de acordo com a Idade..
+    Analisar se define idade ou pais primeiro..
+    Objetivo manter o código simples..
+    Criar classes expecíficas para atributos do cliente e país (gets e sets)..
+    Lembrar de ter dois construtores..
+    Não é uma boa saída tirar o private e gets e sets, mesmo que não faça sentido..
+    Ele fala muito mal do código do pessoal do "Sireata".. kkkkkk :)
+    Príncipio DRY (não repetir código)..
+    Slides do livro Somerview (Reuse)..
+    Maneiras, benefícios e problemas do reuso..
+    Reutilizar bibliotecas..
+    Biblioteca "Lombok"..
+    Maeven utiliza uma estrutura unica de diretorios, podendo ser usado em qualquer IDE, mas também para facilitar o uso de bibliotecas..
+    Adiionar dependência ao Maeven (Lombok)..
+    O Lombok gera em tempo de código os gets e sets..
+    Apaga os gets e sets sem validação nenhuma (inúteis)..
+    Analisar o uso do Lombok (colocar os @ no inicio do código)..
+    @Data gera gets, sets, toString...
+    Lombok não cria se já existe get ou set..
+    Criar excessão para nome menor que 5 caracteres..
+    Quando diz que vai gerar uma excessão, é obrigatório tratá-la (try catch)..   
+    Não pode ter verificação dentro de incluir, porque ele serve apenas para incluir..
+    Utilizar "set" (interface) no lugar de arraylist, e instancía um hashset para verificar a unicidade do nome..
+    Cria @EqualsandHashcode, eusa o include no atributo nome..
+
+    Acabou a bateria..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

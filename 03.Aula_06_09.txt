@@ -1,0 +1,74 @@
+Eu perdi só uma aula mas parece que foi um mês inteiro..
+
+Aula de ontem::
+-Como começar uma aplicação..
+-A melhor é: começar pelas regras de negócio..
+-Estratégia de camadas (horizontais) e outra com nome em inglês..
+-Dividiu o sistema em pacotes (camadas horizontais)..
+-O sistema só tem uma camada, a de negócios..
+
+Aula de Hoje::
+-Estrutura arquitetural (primeiro slide da aula, Some useful module structures, data model)..
+-Para representar a estrutura de dados usa-se um DER..
+-New File->jeddict modeler (pluggin)..
+-Usar o jeddict para criar o MER a partir das classes dos sistema..
+-Os métodos não podem ser transformados em tabelas (PROBLEMA)..
+-Para resolver esse problema, precisamos de um mapeamento objeto relacional(ORM), para os dois conversarem..
+-Precisa adicionar uma chave primária no método..
+-Vai criando o MER com o jeddict..
+-Cria o lado dos métodos com o jeddict, e depois tranforma no lado do banco (botão direito->view SQL)..
+-Cria o atributo id na classe..
+-As classes não necessariamente são as tabelas do banco..
+-Olhar os exemplos do moodle (Segundo e penúltimo)..
+-Qual banco usar? Usar um banco de dados que já fica acoplado na aplicação..
+-Vamos usar o Apache Derby (Enquanto a aplicação tá executando, ele tá executando, parou, ele para)..
+-Como adicionar??
+-No pom.xml, adicionar dependencia..
+-Jeito difícil:
+    -Vai no repositório do Maven (navegador) e pesquisa a biblioteca, copia e cola a dependencia no pom.xml..
+-Jeito fácil:
+    -botão direito dependência->ADD dependency->querry:apache derby->adicionar na aplicação..
+-Olhar pesquisa que ele deixou na última aula (Por que o maven)..
+-Na pesquisa, mostra o que usar para conectar o banco..
+-Vamos usar o JDBC agora e depois o Hibernate..
+-Olhar o tutoriais JDBC..
+-O derby tem a implementação do JDBC..
+-Como usar o JDBC? Seguindo o tutorial resumido..
+-Criar a tabela de dentro da aplicação (tópico 4 - connecting)- Primeiro conecta e depois executa
+-Copia o código do pdf para conectar e cola no incluir paisNegocio..
+-Agora cria a tabela..
+-Copia a URL de conexão do pdf.. ("jdbc:derby:memory:database...)
+-Faz um try com parametros, para abrir e fechar a conexão automaticamente..
+-Copia tudo e cola no clienteNegocio, mudando o necessário..
+-No slide de ontem sobre camadas, camadas necessarias..
+-Cria uma nova camada chamada "persistencia"..
+-Como definir quais classes serão criadas no projeto, usando um padrão (JavaEE)..
+-Padrão (Data Access Object)..
+-Resolve o problema de criar o acesso e persistencia de dados em uma nova camada..
+-Botão direito na camada persistencia->refatorar->chama de dao..
+-Cria uma interface IDAO..
+-Usa o <T> para falar que vai usar dois tipos de dados genéricos (cliente, pais)..
+-Cria clienteDAO e paisDAO..
+-public class implements IDAO<cliente ou pais>..
+-No contrutor dos DAOs, coloca o connecting e a criação de tabela que tava nos xNegocio..
+-Copia e cola o tópico 5..
+-Não precisa do if para verificar se conn =! null, porque já esta em um try catch..
+-Não precisa avisar se deu certo, mas precisa gerar uma excessão se deu errado..
+-No listar, copia tudo, cola, faz a conexão..
+-Cria uma variavel resultado para retornar..
+-Vai salvando o retorno da consulta..
+-Lembra de usar valueOf na sigla..
+-Altera o APP para inserir uma sigla também..
+-Altera paisNegocio para o paisDAO..
+-Arruma para criar e listar, agora no DAO..
+
+
+
+
+
+
+
+
+
+
+

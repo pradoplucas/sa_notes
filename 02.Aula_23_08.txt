@@ -1,0 +1,48 @@
+- Aula passada:
+    Pesquisa interface, collection (set, list, ...)
+    Usar uma interface especifica, não uma geral que usa o que não queremos (collection)..
+
+-Continuação:
+    Copia clienteNegocio pra paisNegocio, e muda as variáveis, pois são as mesmas regras para país e cliente..
+    "Implements INegocio", cria uma interface, em ambas as classes..
+    interface INegocio recebe T (tipo genérico)..[1]
+    "public void incluir", pois sem nada é private..
+    Usa LSP do SOLID..
+    Cliente tem um atributo pais do tipo Pais (aumenta o acoplamento, mas é necessário)..
+    Cria os atributos de pais, privados..
+    Cria uma classe pra sigla (com enum pré-definido), para o usuario não poder definir uma sigla qualquer..
+    @Data, @NoArgsContructor, @AllArgsConstructos, @EqualsAndHashCode (onlyexpli...) e define que o nome do pais é unico..
+    Cria uma variavel do tipo pais pra poder passar no cliente, pois agora não é mais uma string..
+    Agora verifica o pais a partir da sigla na classe cliente..
+    Gera uma excessão se o pais for nulo ou o nome menor que 1, em cliente (não esquecer de throws PaisNaoDefinidoException e criar a classe de excessão)..
+    Faltou armazenar no banco..
+    - Número de telefone de acordo com o país:
+        //Não cria o setTelefone com um switch/case para verificar o pais com relação a sigla, pois diminui a manutenabilidade, o código deve ser alterado toda vez que surgir um pais..
+        Pincipio OCP do SOLID (o código deve estar aberto para extensão e fechado para alteração)* ele falou de novo, só que ao contrário..
+        Cria nova classe para validar telefone do país específico (uma para cada país)..
+        Tem que tratar se atende aos requisitos do numero do país..
+        Cria uma interface para validar o telefone, igual [1]..
+        ...
+        Tem que fazer o país olhar para o cliente, e não o contrário
+        Cria uma interface (FabricaValidadorTelefone)..
+        Tem que usar o "of"..
+        Não pode retornar null, se usa um option (mas depois isso vai ser explicado melhor, não usará agora)..
+        Antes o cliente instanciava todos os "validas", e ficava dependente deles, não mais, agora só do FabricaValidadorTelefone..
+        Muda o setTelefone, cria exception se não corresponder..
+        Não importa mais quantos paises forem incluidos, não se mexerá mais no cliente, dá pra ir criando somente novos validadores..
+        Tem que definir o telefone depois de país..
+    FIM..
+
+- Padrões de projeto (Design patterns):
+    Solução bem testada para um problema de projeto recorrente..
+    Padrões são uma estratégia de reuso..
+    Olhar os slides de padrões de design (são antigos, mas bons)..
+    São 23 padrões de projeto..
+    Para entender padrão de projeto, devemo conhecer novas estruturas arquiteturais..
+    Estrutura Componente-and-Connector (olhar slide inicial de arquitetura)..
+    Diagrama de sequencia é necessário para entender alguns padrões de projeto..
+    Diagrama de comunicação favorece a visão dos componentes que estão se comunicando, já o de sequencia favorece a ordem..
+    Olhar o que o factory method (FabricaValidadorTelefone) realmente faz na definição..
+    Não se sabe se padrões são bons ou não, acredita-se que sejam bons..
+    O factory method ajuda na implementação, mas não se sabe se ele afeta a qualidade..
+    

@@ -1,0 +1,23 @@
+Os DAOs de cliente e pais são muito iguais..
+MUITOOOO IGUAIS..
+Principio DRY de não repetir..
+Shusahusahus, ele adora falar mal do pessoal que fez o Siações..
+Ahh, não vi como abre o diagrama do IntelliJ..
+Padraõ de projeto Template Method ajuda em repetições..
+Olhar arquivo do moodle sobre Template Method..
+A primeira coisa que precisamos é uma superclasse..
+TemplateDAO é um modelo, do tipo abstract..
+Usa o <T>, tipo que não é conhecido, deixa a classe mais genérica pra qualquer objeto..
+Protegido, pra que ninguem fora do pacote o chame..
+Todos os métodos de TemplateDAO tem que ser final, pois não podem ser sobrescritos..
+orm = Mapeamento Objeto Relacional;
+ORM acontece dentro de um try pois pode levantar uma excessão, determinar isso no cabeçalho do método..
+O Pais/ClienteDAO se tornam as subclasses (extends TemplateDAO)..
+Ahh, a atividade.. :C
+
+Correção primeira atividade individual..
+Diagrama de sequencia, botão direito na classe, gerar diagrama de sequencia, em cima de onde cria o de classes..
+Resumo, era impossível fazer o diagrama de sequência na mão..
+:C
+Não se cria diagramas no Astah, a própria IDE já gera..
+The End..

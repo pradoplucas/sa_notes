@@ -1,0 +1,23 @@
+Continuar o DAO da aula passada..
+Terminar CRUD..
+
+Duas camadas, regras de negócio e persistência..
+A melhor alternativa para testar o DAO, é um teste unitário..
+Criar teste.. 
+Novo arquivo->Junit Test..
+Ahh, aprendi isso em Engenharia de Software..
+A IDE insere automaticamente no pom o junit, porque um teste unitario foi criado..
+Coloca o @Test antes do método..
+O maeven que roda o teste, mas o netbeans também tem uma interface (A mesma de software)..
+Para verificar se existe: dao.listar().stream().AnyMatch..
+Criar os métodos de exclusão e alteração..
+Toda hora tem que conectar com o banco..
+USA O TUTORIAL DA AULA PASSADA (TÓPICO 8), copia, cola e altera o que for necessário..
+Lembrar o que significa o "?" na string sql..
+Cria o teste para excluir..
+Cria o alterar..
+Testa..
+Criar os métodos faltantes do CRUD no cliente..
+EU TO ENTENDENDO TUDO, TÔ MUITO FELIZ.. xD
+Tenho que pesquisar mais atalhos da IDE..
+Foi apresentado o experimento..
