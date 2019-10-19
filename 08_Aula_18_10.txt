@@ -1,0 +1,22 @@
+Continuação da camada de apresentação..
+
+Padrão MVC..
+O SpringBoot já tem o MVC implementado dentro dele (a depêndencia lá)..
+@GettingMapping é o que pega a página que se quer entrar..
+Ahh, hoje eu to cansadoo, vou copiar pouca coisa.. :/
+Lucas, lembra que não tem nada ligado ainda, Apresentação->Negócio/Persistência..
+Adicionar no input do form o nome (name) das variáveis que estarão correlacionadas no Model..
+O método do form tem que ser post..
+Ele tá fazendo Delete e Update, (olha o código depois, a base é igual para tudo..])
+@PathVariable no método apagar????
+...
+O Alterar é meio chatinho de fazer..
+No form-group, value="#{(paisAtual.nome)!}", é pra que ele mostre o nome, se existir..
+...
+Diretiva do FreeMarker.. (Synopsis??) para fazer IF/ELSE..
+Usa Template porque o código se repete muito..
+FrontController é um padrão (não de projeto)..
+Ele evita que o usuário acesse algo que não deva, na hora que não deva..
+Core J2EE Patterns..
+(Será que isso faz com que não apareça o caminho na barra de endereço!?)
+

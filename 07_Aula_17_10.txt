@@ -1,0 +1,78 @@
+Decompor a aplicação em camadas horizontais começando pelas regras de negócio (incomum mas excelente)..
+Depois fizemos a camada de persistência..
+Agora vamos olhar a camada de apresentação..
+Vamos olhar para web, assim poderá ser utilizado em web, mobile e embarcados..
+Primeiro vamos fazer a apresentação, depois conectar com as outras camadas..
+Camada web = tudo que é usado para interagir com o usuário..
+Os requisitos são os mesmos do inicio do semestre..
+Não é aconselhável começar pela camada de apresentação, melhor por persistência..
+Inexperientes começam pela apresentação, experientes pela persistência..
+
+Muito dificil integrar HTML, CSS, JS somente..
+Estratégias de reuso aplicadas em web (bootstrap)..
+A referência utilizada para bootstrap é a do w3schools, só olha a documentação oficial para coisas muito específicas..
+Só se preocupa com beleza depois que está pronto o mais importante..
+
+Cria file pais-view.HTML..
+
+Bootstrap precisa de três bibliotecas..
+Segue o tutorial do w3schools..
+Navbar responsivo..
+Card (pra gerar o container), é todo o corpo da aplicação..
+Faz o container-fluid para não relar nas laterais..
+E o mt-3 para não relar na parte de cima (navbar)..
+Form..
+O rótulo (label for) referencia o id..
+Placeholder para já deixar um texto de exemplo..
+Tables..
+Ele jogou o botão pra cima e deixou tudo estranho.. :)
+
+A página é estática, mas tem que ser dinâmica, tem que ter uma utilidade..
+JS pra colocar dinamismo na página, mas tem alternativas..
+Vamos usar uma ferramenta de template (FreeMarker)..
+Ele integra o HTML com a aplicação JAVA..
+Precisamos de um framework pra unir tudo (HTML, JAVA e FreeMarker)..
+Vamos usar o SpringBoot.. Lá naquela pagina pra cria a aplicalção do SB..
+Versão mais antiga (2.0?.9), pois a mais nova deu problema..
+Três depêndencias necessárias: Spring Web, FreeMarker e Lombok..
+Pra colocar todos juntos vamos usar um padrão (MVC)..
+MVC é um padrâo arquitetural para a camada de apresentação..
+Persistencia - DAO e TEMPLATE..
+Negócio - Factory e Build.
+Apresentação - MVC..
+O que é mais importante está em amarelo no artigo do moodle..
+"NUNCA FALAR EM APLICAÇÃO MVC, porque não é.."
+Tem três papéis a serem exercidos..
+Model, View, Controller..
+No nosso caso, o Model é uma classe dos dados (Sigla?)..
+AAhh, tendi nada, depois dar uma lida no artigo como funciona o relacionamento dos três papéis..
+
+Colocar a página HTML dentro do projeto JAVA..
+Quando cria o projeto com o Spring Web, ele cria duas pastas a mais.. (Static e Templates)..
+Coloca o HTML dentro do Templates..
+Muda a extensão de HTML para ftl..
+Precisa do Controller e do Model..
+Precisa criar umpacote para a camada de apresentação..
+Cria uma classe chamada PaisController..
+Primeiro vamos usar uma lista fake de países, semana que vem a gente integra com o resto do projeto..
+Cria PaisModel..
+PaisModel tem que ter o ID também, além de nome e sigla, porque depois iremos ligar com o banco e o banco precisa da sigla..
+Usa Lombok no PaisModel..
+Cria uma lista de PaisModel em PaisController, e um contrutor para criar os paises fakes..
+Em PaisController
+Adiciona a notação @Controller..
+@GetMapping("/pais"), quando clicar em pais, chama o pais-view (metodo listar, não precisa da extensão)..
+localhost:8080/pais
+No controller, pega o model e disponibiliza o model pro view, pois só o controller conversa com o view..
+No método listar utiliza Model, o SpringBoot disponibiliza para o servidor/memória com Model..
+Tem que alterar o view para que ele busque o model na memória..
+Agora entra com o FreeMarker..
+Preciamos usar diretivas..
+Substitui partes estáticas por dinâmicas..
+(Tipo o EJS)..
+Vamos usar o #list..
+Coloca a tabela dentro do #list..
+Observar a palavra que foi usada com o Model memoria, nesse caso "paises", pois é isso que vai usar o #list para ele saber o que buscar na memoria/servidor..
+Olha o código depois que você entende melhor Lucas..
+
+Acabooooooou.. :)

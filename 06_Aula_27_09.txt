@@ -1,0 +1,3 @@
+Usar IntelliJ, muito melhor que Netbeans.. :)
+Acertei o código inteiro, tô muito orgulhoso de mim.. hsuahsuashuashaushas
+Código: dois primeiros números do RG + 3 * último dígito do RG - 1..
