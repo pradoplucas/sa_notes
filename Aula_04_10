@@ -1,0 +1,70 @@
+ONtem mexemos com a camada de dados, e depois da semana que vem vamos mexer com a visualização..
+Hoje vamos ver tipos de relações (OneToMany/ManyToMany)..
+*
+Quando se deparar com um diagrama muito grande, começa pelas bordas, porque normalmente as classes não se relacionam com mais ninguém, só dependem delas mesmas..
+*
+Cria o projeto do spring igual aula passada..
+Dependencias: Spring Data, LOmbok e H2 Database.. Spring Boot Devtools e Spring Boot Web..
+Cria um pacote chamado entity..
+Cria a clasee State/Product/Enum e implements Serializable..
+Long Id -> Id sempre Long (maiúsculo)..
+Cria um DAO/Repository para cada classe..
+Lembra que o DAO não é uma classe mas sim uma interface.. (extendis JpaRepository<Classe, TipoId>)
+Os DAOs são vazios.. (Ahh, eu queria saber fazer isso quando fiz POO)..
+@EventListener (ApplicationReadyEvent.class) //Para o método executar quando a aplicação estiver pronta..
+TUDO IGUAL AULA PASSADA ATÉ AGORA..
+Não tem como fazer o [StateDAO dao = new StateDAO()], por isso tem que criar o atributo final lá em cima..
+@RequiredArgsConstructor, constroi um construtor para todos os atributos do tipo final..
+Procurar o que significa o :: no (System.out::println)..
+Se quiser criar varios de uma vez só, usa Stream..
+localhost do H2 para ver o console do banco, as tabelas.. (Com a aplicação executando..)
+Tem que analisar como se lê as relações.. (pessoa tem cidade, cidade tem estado, não ao contrário)
+Cria city que referencia State, então faz igual aula passada.. @ManyToONe
+Para inserir uma cidade precisa de estado, mas primeiro tem que ver se o estado já está contido no banco..
+Pode fazer do jeito que ele fez essa aula (Jeito Ruim) (ele mudou e ficou igual aula passada) ou como ele fez aula passada, que é muito mais fácil..
+Jeito Ruim = sem criar o findByName..
+Person é uma classe abstrata, um modelo, os filhos (customer/employer) herdam ela..
+Os atributos são protegidos..
+Mesmo não sendo uma classe de entidade, ele vai ser usado como uma, então usa a notação @MappedSuperClass
+public class Customer extends Person implements Serializable..
+@Enumerated(EnumType.String) junto com o status.. Para estabelecer a relação com o enum que já foi criado..
+Um cliente pode ter muitos telefones, como fazer isso??
+Não precisa cria a tabela telefone, senão teria quee criar o DAO do telefone, e ficar chamando telefoneDAO, clienteDAO..
+@EllementCollection cria uma tabela auxiliar telefone que só vai poder ser acessada por customer..
+O save retorna o tipo de dado que foi consultado..
+Até ele se bugou agora..
+Ele teve que criar o "Construtor"" na mão, chamado create, porque o customer herda as coisas de outra classe, então o builder não consegue criar as coisas para ele..
+No create ele define com a notação builder..
+O que ele fez com aquele fetch ali?? //ELe vai carregar o objeto é chamado ou quando ele é necessário..
+
+UHH, agora é o @ManyToMany..
+
+Agora aquele atributo final tem que ser uma lista, porque o empregado pode ter várias atividades..
+Não prestei atenção nessa parte, tem que ver o que ele fez com Employee e Activity sobre o relacionamento..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
