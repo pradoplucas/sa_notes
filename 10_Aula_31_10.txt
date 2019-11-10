@@ -1,0 +1,30 @@
+Ele apagou o código sem querer, vai refazer o da semana passada..
+
+Lembra, semana passada ele ia juntar as três partes do projeto..
+
+A primeira coisa a se fazer é padronizar as dependências das três partes.. (pom.xml)
+
+O segundo passo é ajustar os imports, pois agora os pacotes são diferentes..
+
+@RequiredArgsCOntroller adiciona as paradas automaticamente (Lombok)..
+
+PaisNegocio é uma classe de serviço..
+
+paisDAO.findAll() retorna uma lista de países, mas a função espera um set..
+
+O país que volta do findall é diferente do país da classe PaisNegocio..
+
+Ele coloca DTO em tudo que tá no domínio..
+
+Analisar se as coisas estão no lugar certo..
+
+Colocar códino no PaisDTO, pois ele não pertence a PaisNegócio (método PaisDTO.DTOFromEntity())..
+
+Colocar o Set<PaisDTO> DTOFromEntities, que chama o que eu escrevi na linha anterior e retorna para PaisNegocio..
+
+Tudo isso fere a coesão..
+
+Optional<Pais> é um objeto, tem um método que verifica se o objeto é vazio (.isPresent() ou .isEmpty())..
+
+Entidade, Model e DTO são coisas diferentes..
+

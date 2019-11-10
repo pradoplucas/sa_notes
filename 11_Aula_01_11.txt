@@ -1,0 +1,88 @@
+Microserviços..
+
+O professor realmente é da área de Arquitetura, mostrou até o mestrado dele..
+
+O mundo real funciona com serviços, com procedimentos..
+
+Quando a gente olha pro mundo, não enxergamos métodos, atributos, mas sim serviços..
+
+Não importa de onde vem o serviço, o que importa é o que ele oferece..
+
+Os programas só conseguem conversar entre si se eles quiserem conversar, mesmo que estiverem na mesma linguagem..
+
+APIs são disponibilizadas por serviços..
+
+[OLHA O MESTRADO DELE DEPOIS]
+
+Não importa a linguagem, mas sim o serviço oferecido..
+
+[Ele levou 30 minutos da aula pra explicar uma linha do mestrado dele..]
+
+Olha em específico a imagem com detalhes azuis do mestrado dele, ele falou um monte sobre isso, mas não prestei a atenção..
+
+SOA: Arquitetura orientada a serviço..
+
+Não confundir SOA com COA (Computação orientada a serviços)..
+
+Pra COA funcionar, precisa da SOA..
+
+SOA = estrutura arquitetural..
+
+Tem as três entidades que formam a SOA (adivinha, tem que olhar o mestrado dele)..
+
+20h20 e ele explicou dois parágrafos do mestrado dele..
+
+"Serviços Web" é uma tecnologia..
+
+Não estamos usando java pra mexer com Web, estamos usando um framework (Springboot)..
+
+Se for implementar um serviço web, normalmente será usado REST..
+
+[Abriu terceiro link da aula: WeB Service de Rastreamento]
+
+Dei uma viajada, ele falou dos correios, agora ele ta falando de verbos (site: Dzone)..
+
+Mais uma viajada..
+
+ELe ta falando de uma API de localidades..
+
+O navegador faz um get por padrão..
+
+Se quiser usar POST, PUT, DELETE, tem que fazer por código..
+
+Ele usa httpie (Não faz POST, ele voltou atrás e falou que faz sim)..
+
+JSONPlaceHolder -> Simula requisições..
+
+Agora vamos implementar o REST com SpringBoot..
+
+Pegar o mesmo projeto que já estávamos fazendo e adicionar uma nova camada chamada "Serviços"..
+
+A camada de serviço entra como um intermediário entre negócio e as outras camadas..
+
+Depois apresentacao vai virar algo separado (Front-End)..
+
+(Vamos usar DTO no servico)
+
+Tranformar dto em uma camda transversal que é usada por outras camadas..
+
+Normalmente quando se cria algo, retorna o que foi criado e não void.. (vivendo e aprendendo)
+
+Voltamos para a parte onde ele escreve o código e a gente fica olhando com cara de paisagem..
+
+Usa a notação @RestController, ele vai entender que essa classe é um serviço..
+
+Usa @GetMapping também, que eu não lembro pra que serve..
+
+Ahh, lembrei do @GetMapping, ela faz algo parecido com Express, mapeia requisições, nesse caso em específico, GET..
+
+Ahh, tem o H2, o banco de dados em memória, dá pra acessar as tabelas do BD pelo navegador.. (localhost:8080/h2-console)
+
+Tem que adicionar uma dependência (devtools)
+
+Retornar o código 200 em um POST não é muito bom..
+
+Obs: (Set é um conjunto)..
+
+ResponseEntity.noContent(), pra retornar o código desejado, mão 200..
+

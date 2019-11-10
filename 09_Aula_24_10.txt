@@ -1,0 +1,16 @@
+Taabalho Final.. AAAAAH..
+Tudo deveria estar dividido nas três camadas, mas não é, principlamente na web..
+[Primeiro Link do moodle]
+Uma arquitetura não é um diagrama, é um conjunto de estruturas..
+O "desenho" é só uma composição estrutural de uma das partes da arquitetura..
+Módulo -> Estruturas estáticas(camadas, calsses)
+Componente e Conector -> Estruturas dinâmicas (mostram como a estrutura funciona quando está em execução)
+Allocação -> Vamos ver a partir de hoje..
+Usa UML para descrever essa estrutura..
+Diagrama de deploy..
+Ele abriu um pptx e falou várias coisas, mas não prestei a atenção porque lembrei que tenho uma trabalho de redes pra entregar daqui a pouco..
+...
+Agora vamos ligar as três camadas do projeto que estávamos fazendo nas aulas..
+O que é @Autowired!?
+DTOS..
+
