@@ -1,0 +1,135 @@
+Compila tudo que foi visto no semestre..
+
+Implantar, analisar e demonstrar as duas aplicações..
+
+As duas aplicações fazem a mesma coisa, só que usam arquiteturas diferentes..
+
+Mostrar funcionando..
+
+Usar as descrições vistas durante o semestre..
+
+Diagramas: classe, sequência, deploy, VIMOS PELO MENOS UMAS 10..
+Três categorias: Estática, Dinâmica E Implantação..
+
+Mostrar os diagramas e mostrar as diferenças..
+
+Na questão da manutenabilidade, as duas tem impactos diferentes, mostrar quais, pegar os diagramas e mostrar onde e porque.
+
+Demonstração: Mostrar ela funcionando e quais elementos estão em ação em determinados momentos..
+
+=========================================================
+
+Descrever serviços WEB..
+
+Não é bom usar UML..
+
+--------SWAGGER--------
+
+Swagger é bom..
+
+O que mais interessa é o segundo link do moodle..
+
+Ao invém de abrir as classes e procurar nó código, é possivel usar o swagger..
+
+Ahh, perdi o comecinho e não tô entendendo nada..
+
+É posível usar o swagger para testar a API, sem REST..
+
+Pesquisar mais sobre REST, porque eu tô boiando aqui..
+
+O springboot tem uma implementação para o swagger..
+
+Adiciona as dependencias e cria um arquivo que inicia o Swagger..
+
+O próprio SpringBoot cria e gera um link que é possível acessar no navegador..
+
+Não aparecem os textos completos, porque teria que colocar comentários no códigp..
+
+USAR ISSO NO TRABALHO, SE DER..
+
+Tô entendendo, eu acho..
+
+------------APIcurio---------
+
+APIcurio, ferramenta comercial, porém tem uma "versão gratuita"..
+
+Tem um vídeo que ajuda..
+
+ASSISTE O VÍDEO DEPOS..
+
+Ao criar a API, ele salva direto no GitHub..
+
+Ahh, esqueci de comentar, essas últimas aulas serão mais "Teóricos"..
+
+APIcurio começa pela especificação, é útil em alguns cenários começar por essa ordem quando se tem tempo..
+
+Problema do REST..
+    Não funciona muito bem quando precisa de algum dado específico dentro da aplicação..
+    Precisaria implementar essa requisição a nível de código..
+
+-----------GraphQL---------
+
+É uma linguagem de consulta para APIs..
+
+Especifica o que sse quer e ele retorna..
+
+Ele acessa direta e faz a consulta..
+
+Muito útil para sites grandes..
+
+O responsável pelo frontend pode pesquisar coisas do backend, sem necessariamente consultar o responsável pelo backend..
+
+GraphiQL (tem um i) -> Interface gráfica para testar..
+
+Bem interessante..
+
+É quase como se fosse liberado o banco de dados..
+
+--------Javalin----------
+Probelema com o REST..
+    Transformar uma aplicação em REST com springboot..
+    
+O Javalin é uma biblioteca/framework que pode transformar uma aplicação em REST..
+
+Só precisa colocar a dependência e alterar "pouca coisa do código"..
+
+Dá uma olhada nos links..
+
+Noss, é muito mais deboa com esse Javalin..
+
+O JS trata o json como nativo, o Java não..
+No exemplo que ele deu, tem que mapear o json para a classe, pode dar problemas..
+Ele quis dizer que o Java não serve para tudo..
+Mas que isso é a única diferença entre o JS e o Java..
+Ele fez uma pesquisa ano passado comparando JS e Java..
+E o custo de escrever algo nas duas é o mesmo..
+O JS só tem vantagem quando começa a usar web..
+
+--------------
+Tudo que foi feito com REST até agora foi do ponto de vista do servidor, não do cliente..
+
+O objetivo é fazer a camada de apresentação separada do "resto"..
+
+Foi usado serviço para isso, para desacoplar o front do back..
+
+Ele vai usar o código do semestre passado porque não vai dar tempo..
+
+Front e Back são projetos separados COMPLETAMENTE..
+
+AHH, a separação das camadas é muito útil, porque é possível usar o back para desktop e mobile, é "só" mudar a camada de apresentação..
+
+A única coisa ruim do springboot é a parte de REST..
+
+Ele usa uma biblioteca chamada Unirest (adiciona a dependência no pom)..
+
+Tem que fazer as modificações de JSON para classe e vice-versa..
+
+Para fazer essas alteraçãoes ele usa uma biblioteca chamada Gson..
+
+----
+
+Microserviços quebra a estrutura em mais partes, não só apresentação e resto..
+
+É isso que nós temos no projeto final..
+
+MVC na apresentação, e tudo com três camadas diferentes..

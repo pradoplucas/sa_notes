@@ -1,0 +1,49 @@
+Correção das atividades das aulas passadas..
+
+Atividade Individual 03:
+    Ih rapaz, fiz errado pra caramba..
+    Tinha que pegar o projeto da semana 13..
+    Precisa da camada/pacote de serviço..
+    Cria uma classe dentro de serviço chamada ClienteServico..
+    Dentro dessa classe cria os dois métodos..
+    Usa ClienteDTO como referência..
+    Em CLienteNegocio coloca @Service..
+    E no CLienteServico, coloca um private final ClienteNegocio..
+    No construtor de ClienteServico ele recebe um ClienteNegocio..
+    Usa Lombok para esse construtor citado acima..
+    No incluir gera uma exceção da camada de negocio..
+    Ainda não é um serviço REST..
+    Usa a notação @RestController, que transforma a classe em um controlador Rest..
+    Precisa do @PostMapping, para mapear ..
+    No listar é um mapeamento Get..
+    Se espera um retorno HTTP..
+    No listar, ele retorna um ResponseEntity encapsulando o Set<CLienteDTO>, com o código 200, ok..
+    No incluir, retorna 201 com o cliente inserido..
+    Agora integra negócio com persistência..
+    Antes era uma lista fake no ClienteNegocio..
+    Injeta o ClienteDAO com o Lombok @RequiredArgumentsConstructor, e coloca o private final ClienteDAO clienteDao..
+    No ClienteDTO, cria um método que cria um DTO a partir de uma entidade..
+    Precisa de um método no ClienteDTO para converter uma lista de clientes em clienteDTO (DTOsFromEntities)..
+    No listar chama DTOsFromEntities, e passa a lista de clientes..
+    No incluir do cliente negócio tem que integrar com a persistência também..
+    Ele faz um if pra procurar no banco, e gera uma exceção se encontrar..
+    Pra salvar no incluir, precisa converter o clienteDTO em cliente..
+    O método de ClenteDTO se chama EntityFromDTO, e faz a conversão citada acima..
+    Não faz sentido mater o pacote dominioo dentro do pacote negocio, transforma em uma pacote chamado DTO, pois muitos pacotes usam ele, não somente negocio..
+    DTO é uma camada tranversal que é usada por Apresentação, Serviço e Negócio..
+    Lembrete: Pra rodar, primeiro dá build e depois executa (verde)..
+    Ele usa o terminal com aquele programa HTTP (olha as anotações da outra aula dele)..
+    HTTPy!? Talvez!?
+    Ih rapaz, deu erro no POST..
+
+Atividade em Grupo 03:
+    O projeto utilizado não é SpringBoot..
+    Olha o pom.xml e adapta..
+    Precisa adaptar a main, lá que inicializa o SpirngBoot.. [AAAAHHH, erramos :(]
+    No PautaDAO, adicionar a notação @RestController..
+    No método listarPorAta, usa um @GetMapping..
+    E no salvar, um @PostMapping..
+    Foi adicionado duas coisas a mais dentro dos métodos, não consegui ver direito o que foi, olha depois no código dele..
+    E era só isso..
+    Desisto da disciplina, onde que tranca o curso!?
+    
